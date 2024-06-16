@@ -12,6 +12,7 @@
     --sand: #e6d5c5;
     --light-gray: #7E7F83;
     --orange: rgb(250, 165, 62);
+    --blue: rgb(0, 162, 255);
 }
 
 ul{
@@ -19,6 +20,9 @@ ul{
 }
 a{
     text-decoration: none;
+}
+a:hover{
+    color: var(--orange);
 }
 h1, h2, h3, h4, ul, a, textarea, input, p{
     margin: 0;
@@ -64,16 +68,16 @@ header{
 .links{
     margin-bottom: 2rem;
 }
-footer{
+footer {
     padding: 1rem;
     background-color: var(--black);
-    color: var(--white) !important;
-    font-size: 1rem;
+    color: var(--blue) !important;
+    font-size: 1.5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-
+    justify-content: center; /* Centra los íconos horizontalmente */
+    gap: 1rem; /* Espaciado entre los íconos */
 }
 main{
     color: var(--white);
@@ -109,10 +113,51 @@ main{
 }
 #icono{
     margin: 5px;
+    color: var(--blue);
 }
 a{
     color: var(--black);
 }
 .titulo-productos{
     margin-top: 1rem;
+}
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+    display: block;
+}
+
+.description-carrusel {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--orange);
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: calc(100% - 20px); /* Ajuste para el padding */
+    box-sizing: border-box;
 }
