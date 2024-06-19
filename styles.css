@@ -2,15 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-family: "Jost", sans-serif;
 
 }
-
+body{
+    height: 100%;
+}
 :root{
     --black: #14110F;
     --gray: #34312D;
     --white: #F3F3F4;
-    --sand: #e6d5c5;
+    --sand: #ebe1d8;
     --light-gray: #7E7F83;
     --orange: rgb(250, 165, 62);
     --blue: #0a2641;
@@ -22,9 +24,13 @@ ul{
 }
 a{
     text-decoration: none;
+    font-weight: bold;
 }
 a:hover{
     color: var(--orange);
+}
+.links a{
+    font-size: 16px;
 }
 h1, h2, h3, h4, ul, a, textarea, input, p{
     margin: 0;
@@ -34,22 +40,22 @@ h1, h2, h3, h4, ul, a, textarea, input, p{
     display: grid;
     grid-template-columns: 1fr 4fr;
     background-color: var(--gray);
+    height: 100vh;
 }
-aside{
-    /*padding: 2rem;*/
+aside {
     background-color: var(--sand);
     position: sticky;
-    top: 0;
-    height: 100vh;
-    width: 20vw;
+    height: 100vh; /* Modificación: asegurar que aside ocupe toda la altura de la ventana */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-
+    padding: 0; /* Modificación: ajuste del padding para evitar desbordamiento */
 }
 .aside{
     padding: 5px;
+    padding-right: 0;
+    padding-bottom: 0;
+
 }
 header{
     margin-bottom: 0%;
@@ -59,8 +65,8 @@ header{
     display: flex;
     align-items: center;
     margin: 0;
-    padding: 0;
-    margin-left: 1.5rem;
+    padding-left: 2rem;
+    /*margin-left: 1.5rem;*/
 
 }
 .logo-img{
@@ -68,7 +74,35 @@ header{
 
 }
 .links{
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+}
+#icono{
+    margin: 5px;
+    color: var(--orange);
+}
+.boton-navbar{
+    background-color: var(--gray);
+    border: none;
+    display: flex;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 5px;
+    width: 100%;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.boton-navbar a{
+    color: var(--white);
+    margin: 5px;
+}
+.boton-navbar a:hover{
+    color: var(--orange);
+}
+.boton-nav-productos{
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    margin: 5px;
 }
 footer {
     padding: 1rem;
@@ -79,6 +113,7 @@ footer {
     align-items: center;
     justify-content: center; /* Centra los íconos horizontalmente */
     gap: 1rem; /* Espaciado entre los íconos */
+    margin: 0;
 }
 #footer-ig {
     color: rgb(252, 1, 192);
@@ -102,56 +137,130 @@ footer {
 main{
     margin: 0;
     padding: 0;
+    overflow: auto;
 }
 .div-main{
     color: var(--white);
     padding: 2rem;
 }
+/* Estilos para la barra de búsqueda */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--black);
+    padding: 0.5rem;
+    margin-bottom: 0;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Asegura que esté por encima del contenido principal */
+}
+
+.search-input-container {
+    position: relative;
+    flex-grow: 1;
+    max-width: 400px;
+    margin-left: auto;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--white);
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--gray);
+    color: var(--white);
+}
+
+.search-input::placeholder {
+    color: var(--light-gray);
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-input:focus + .search-icon {
+    display: none;
+}
+
+.titulo-pages {
+    display: flex; /* Alinea los hijos en línea */
+    align-items: center; /* Centra verticalmente a los hijos */
+    padding: 0rem;
+    padding-left: 1.5rem;
+}
+
 .titulo-principal {
-    
     color: var(--white);
     margin-right: 0.5rem;
+    margin-left: 0;
     font-size: 25px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 0 !important;
 }
-#online{
+
+#online {
     color: var(--orange);
     font-family: "Alkatra" !important;
     font-size: 25px;
     margin-top: 0.3rem;
+    padding-top: 3px;
     text-decoration: underline;
 }
+
+.bi-chevron-compact-right {
+    color: var(--ligh-blue); /* Cambia el color a azul */
+    font-size: 35px; /* Tamaño del ícono */
+    margin: 0 0.5rem; /* Espaciado horizontal */
+    padding-top: 7px;
+}
+
+.page-name {
+    color: var(--white); /* Color blanco */
+    font-family: "Alkatra" !important; /* Usa la misma tipografía que "online" */
+    font-weight:100 !important; /* Estilo de fuente más delgada */
+    font-size: 20px;
+    text-decoration: none; /* Sin subrayado */
+    padding-top: 9px;
+}
+
 .contenedor-productos{
     display:grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 1rem;
-    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem;
+    gap: 1rem;
 
 }
 .producto-imagen{
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
+    width: 300px;
+    height: 250px;
+    border-radius: 5px;
+    margin: 0;
 }
 .producto-detalles{
     background-color: var(--orange);
     color: var(--black);
-    border-radius: 1rem;
+    border-radius: 5px;
     padding: 10px;
     text-align: center;
+    width: 300px;
+    margin-top: 0;
+}
+.link-producto-menu:hover .producto-detalles{
+    background-color: var(--blue);
+    color: var(--white);
     
 }
-.boton-navbar{
-    background-color: transparent;
-    border: none;
-    font-size: 15px;
-    margin: 5px;
-}
-#icono{
-    margin: 5px;
-    color: var(--ligh-blue);
-}
+
 a{
     color: var(--black);
 }
@@ -199,60 +308,8 @@ a{
     width: calc(100% - 20px); /* Ajuste para el padding */
     box-sizing: border-box;
 }
-.link-producto-menu:hover .producto-detalles{
-    background-color: var(--blue);
-    color: var(--white);
-    
-}
-/* Estilos para la barra de búsqueda */
-.search-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--black);
-    padding: 1rem;
-    margin-bottom: 0;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Asegura que esté por encima del contenido principal */
-}
 
-.search-input-container {
-    position: relative;
-    flex-grow: 1;
-    max-width: 400px;
-    margin-left: auto;
-}
 
-.search-icon {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--white);
-}
-
-.search-input {
-    width: 100%;
-    padding: 0.5rem 0.5rem 0.5rem 2.5rem;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--gray);
-    color: var(--white);
-}
-
-.search-input::placeholder {
-    color: var(--light-gray);
-}
-
-.search-input:focus {
-    outline: none;
-}
-
-.search-input:focus + .search-icon {
-    display: none;
-}
 
 /*Estilos divs página de contacto*/
 .sucursales {
@@ -261,6 +318,7 @@ a{
 
 .titulo-contacto {
     margin-bottom: 10px; /* Espacio debajo del título */
+    text-decoration: underline;
 }
 
 .info {
