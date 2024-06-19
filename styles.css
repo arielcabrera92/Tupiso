@@ -5,6 +5,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 
 }
+
 :root{
     --black: #14110F;
     --gray: #34312D;
@@ -12,7 +13,8 @@
     --sand: #e6d5c5;
     --light-gray: #7E7F83;
     --orange: rgb(250, 165, 62);
-    --blue: rgb(0, 162, 255);
+    --blue: #0a2641;
+    --ligh-blue: rgb(101, 155, 255);
 }
 
 ul{
@@ -71,7 +73,6 @@ header{
 footer {
     padding: 1rem;
     background-color: var(--black);
-    color: var(--blue) !important;
     font-size: 1.5rem;
     display: flex;
     flex-direction: row;
@@ -79,29 +80,65 @@ footer {
     justify-content: center; /* Centra los íconos horizontalmente */
     gap: 1rem; /* Espaciado entre los íconos */
 }
+#footer-ig {
+    color: rgb(252, 1, 192);
+}
+#footer-ig:hover {
+    color: var(--orange);
+}
+#footer-fb {
+    color:rgb(8, 102, 255);
+}
+#footer-fb:hover {
+    color: var(--orange);
+}
+#footer-wa {
+    color: #25D366;
+}
+#footer-wa:hover {
+    color: var(--orange);
+}
+
 main{
+    margin: 0;
+    padding: 0;
+}
+.div-main{
     color: var(--white);
     padding: 2rem;
 }
 .titulo-principal {
-    margin-bottom: 2rem;
+    
+    color: var(--white);
+    margin-right: 0.5rem;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#online{
+    color: var(--orange);
+    font-family: "Alkatra" !important;
+    font-size: 25px;
+    margin-top: 0.3rem;
+    text-decoration: underline;
 }
 .contenedor-productos{
     display:grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    padding: 1rem;
+    gap: 2rem;
 
 }
 .producto-imagen{
     max-width: 100%;
     max-height: 100%;
     border-radius: 1rem;
+    margin-bottom: 1rem;
 }
 .producto-detalles{
     background-color: var(--orange);
     color: var(--black);
     border-radius: 1rem;
-    padding: 2px;
+    padding: 10px;
     text-align: center;
     
 }
@@ -113,7 +150,7 @@ main{
 }
 #icono{
     margin: 5px;
-    color: var(--blue);
+    color: var(--ligh-blue);
 }
 a{
     color: var(--black);
@@ -125,6 +162,7 @@ a{
     position: relative;
     width: 100%;
     max-width: 800px;
+    max-height: 500px;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 10px;
@@ -160,4 +198,104 @@ a{
     text-align: center;
     width: calc(100% - 20px); /* Ajuste para el padding */
     box-sizing: border-box;
+}
+.link-producto-menu:hover .producto-detalles{
+    background-color: var(--blue);
+    color: var(--white);
+    
+}
+/* Estilos para la barra de búsqueda */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--black);
+    padding: 1rem;
+    margin-bottom: 0;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Asegura que esté por encima del contenido principal */
+}
+
+.search-input-container {
+    position: relative;
+    flex-grow: 1;
+    max-width: 400px;
+    margin-left: auto;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--white);
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--gray);
+    color: var(--white);
+}
+
+.search-input::placeholder {
+    color: var(--light-gray);
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-input:focus + .search-icon {
+    display: none;
+}
+
+/*Estilos divs página de contacto*/
+.sucursales {
+    margin: 20px; /* Margen exterior para separar del borde de la ventana */
+}
+
+.titulo-contacto {
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+.info {
+    display: flex; /* Mostrar los íconos y textos en línea */
+    align-items: center; /* Alinear verticalmente al centro */
+    margin-bottom: 10px; /* Espacio debajo de cada línea */
+}
+
+.info i {
+    font-size: 1.5rem; /* Tamaño del ícono */
+    margin-right: 5px; /* Espacio a la derecha del ícono */
+}
+#whats-contacto{
+    color:#25D366;
+}
+#maps-contacto{
+    color: rgb(201, 41, 41);
+}
+
+.info a {
+    text-decoration: none; /* Eliminar subrayado del enlace */
+    color: var(--white); /* Color blanco para el número de whatsapp */
+    margin-left: 5px;
+}
+.info a:hover {
+    color: var(--orange);
+}
+
+.info p {
+    margin: 0; /* Eliminar el margen predeterminado de los párrafos */
+    color: var(--white); /* Color blanco para la dirección */
+    margin-left: 5px; /* Espacio a la izquierda de la dirección */
+}
+iframe {
+    margin-bottom: 3rem;
+    height: 400px;
+    width: 800px;
 }
