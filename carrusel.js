@@ -13,3 +13,4 @@ function nextSlide() {
 }
 
 setInterval(nextSlide, 5000); // Cambiar de slide cada 3 segundos
+
