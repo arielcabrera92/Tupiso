@@ -288,14 +288,14 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: (--gray);
-    color: white;
+    background-color: var(--gray);
+    color: var(--orange);
     padding: 0.75rem 1rem;
     font-family: "Jost", sans-serif;
     font-style: italic;
     font-weight: 400;
     user-select: none;
-    margin-top: 1rem;
+    margin-top: 0;
   }
   
   .barra-titulo h4 {
@@ -345,6 +345,7 @@ a{
         margin: 1rem;
         margin-top: 0;
         padding: 1rem;
+        height: 85vh;
     }
     .contenedor-productos{
         grid-template-columns: 1fr 1fr;
@@ -357,6 +358,7 @@ a{
         justify-content: space-between;
         align-items: center;
         background-color: var(--sand);
+        max-height: 15vh;
 
     }
     .logo{
@@ -409,6 +411,7 @@ a{
     .barra-titulo {
         padding: 0.5rem 0.75rem;
         margin-bottom: 1rem;
+        height: auto;
     }
       .barra-titulo h4 {
         font-size: 1.2rem;
