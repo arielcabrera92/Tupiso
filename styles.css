@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Jost", sans-serif;
+    font-family: "Montserrat", sans-serif;
 
 }
 body{
@@ -23,14 +23,18 @@ ul{
     list-style-type: none;
 }
 a{
+    font-family: "Alkatra", cursive;
     text-decoration: none;
     font-weight: bold;
+    margin-top: 0;
 }
 a:hover{
     color: var(--orange);
 }
 .links a{
-    font-size: 16px;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 h1, h2, h3, h4, ul, a, textarea, input, p{
     margin: 0;
@@ -80,7 +84,9 @@ header{
 
 }
 .links{
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 #icono{
     margin: 5px;
@@ -100,6 +106,7 @@ header{
 .boton-navbar a{
     color: var(--white);
     margin: 5px;
+    font-size: 15px;
 }
 .boton-navbar a:hover{
     color: var(--orange);
@@ -108,8 +115,14 @@ header{
     background-color: transparent;
     border: none;
     font-size: 15px;
-    margin: 5px;
+    margin: 3px;
+
 }
+
+.titulo-productos{
+    margin-bottom: 0.5rem;
+}
+
 footer {
     padding: 1rem;
     background-color: var(--black);
@@ -291,8 +304,7 @@ a{
     background-color: var(--gray);
     color: var(--orange);
     padding: 0.75rem 1rem;
-    font-family: "Jost", sans-serif;
-    font-style: italic;
+    font-family: "Montserrat", sans-serif;
     font-weight: 400;
     user-select: none;
     margin-top: 0;
@@ -352,6 +364,8 @@ a{
         padding: 0;
 
     }
+    
+    /*
     .header-mobile{
         padding: 1rem;
         display: flex;
@@ -372,14 +386,68 @@ a{
         align-items: center;
         margin: 0;
         padding-left: 2rem;
-        /*margin-left: 1.5rem;*/
-    
+        /*margin-left: 1.5rem;
     }
-    .logo-img-mobile{
+        */
+    .header-mobile {
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--sand);
+        max-height: 15vh;
+        overflow-x: hidden;
+    }
+
+    .header-socials {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        font-size: 1.5rem;
+        margin-left: 0.5rem;
+    }
+
+    .header-socials .bi-instagram {
+        color: rgb(252, 1, 192);
+    }
+    .header-socials .bi-instagram:hover {
+        color: var(--orange);
+    }
+    .header-socials .bi-facebook {
+        color: rgb(8, 102, 255);
+    }
+    .header-socials .bi-facebook:hover {
+        color: var(--orange);
+    }
+    .header-socials .bi-whatsapp {
+        color: #25D366;
+    }
+    .header-socials .bi-whatsapp:hover {
+        color: var(--orange);
+    }
+
+    .logo-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+    }
+
+    .logo-img-mobile {
         height: 100px;
-    
+        max-width: 100%;
+        object-fit: contain;
     }
-    .open-menu, .close-menu{
+
+    .open-menu {
+        background-color: transparent;
+        color: black;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        margin-right: 1rem;
+    }
+    .close-menu{
         background-color: transparent;
         color: black;
         border: none;
