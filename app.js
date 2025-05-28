@@ -9,7 +9,7 @@ openMenu.addEventListener("click", () => {
 closeMenu.addEventListener("click", () => {
     aside.classList.remove("aside-visible");
 })
-
+ //carrusel
 const slides = document.querySelector('.slides');
 const slide = document.querySelectorAll('.slide');
 let currentIndex = 0;
